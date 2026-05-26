@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>It's All Good, Man — Ibrahim TURKBEN</title>
+  <meta name="description" content="Ibrahim TURKBEN — Technicien Support IT N2. Portfolio itsallgoodman.fr">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ══════════════════════ INTRO ══════════════════════ -->
+<div id="intro">
+  <canvas id="intro-canvas"></canvas>
+  <div class="intro-wrap">
+    <div class="intro-top">
+      <div class="intro-crossed" id="intro-crossed">
+        <span class="intro-crossed-text">SAUL GOODMAN &amp; ASSOCIATES</span>
+        <div class="intro-cross-line"></div>
+      </div>
+      <div class="intro-brand" id="intro-brand">IT'S ALL GOOD, MAN.</div>
+      <div class="intro-sub" id="intro-sub">Ibrahim TURKBEN — Technicien Support IT N2</div>
+    </div>
+    <div class="intro-loader">
+      <div class="intro-progress"><div class="intro-bar" id="intro-bar"></div></div>
+      <div class="intro-status" id="intro-status">Initialisation...</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════ SITE ══════════════════════ -->
+<div id="site" class="hidden">
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-inner container">
+      <a href="#hero" class="nav-logo" id="nav-logo">
+        <span class="nl-main">it's all good, man.</span>
+        <span class="nl-sub">itsallgoodman.fr</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about"    class="nl">Profil</a></li>
+        <li><a href="#skills"   class="nl">Compétences</a></li>
+        <li><a href="#projects" class="nl">Projets</a></li>
+        <li><a href="#contact"  class="nl">Contact</a></li>
+      </ul>
+      <button class="nav-burger" id="nav-burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-pattern"></div>
+    <div class="hero-vignette"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">// PORTFOLIO</div>
+      <h1 class="hero-name">
+        <span class="hero-first">Ibrahim</span>
+        <span class="hero-last">TURKBEN</span>
+      </h1>
+      <div class="hero-role-wrap">
+        <span id="typed-role"></span><span class="type-cursor">|</span>
+      </div>
+      <div class="hero-divider">
+        <span class="hd-line"></span>
+        <em class="hd-quote">It's all good, man.</em>
+        <span class="hd-line hd-line-r"></span>
+      </div>
+      <div class="hero-ctas">
+        <a href="#about" class="btn-primary">Mon Profil</a>
+        <a href="#contact" class="btn-secondary">Me Contacter</a>
+      </div>
+    </div>
+    <a href="#about" class="hero-scroll">
+      <span>Défiler</span>
+      <div class="hs-line"></div>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="sec-eyebrow">DOSSIER N° 001</span>
+        <h2 class="sec-title">Profil</h2>
+        <div class="sec-rule"></div>
+      </div>
+      <div class="about-grid">
+
+        <!-- Sidebar card -->
+        <div class="about-sidebar reveal">
+          <div class="profile-card">
+            <div class="pc-stamp">EXHIBIT A</div>
+            <div class="pc-avatar">
+              <div class="pca-ring-outer"></div>
+              <div class="pca-ring-inner"></div>
+              <div class="pca-core">IT</div>
+              <div class="pca-status"></div>
+            </div>
+            <div class="pc-name">Ibrahim TURKBEN</div>
+            <div class="pc-role">Technicien Support IT N2</div>
+            <div class="pc-company">@ Kuehne+Nagel — Limas</div>
+            <div class="pc-tags">
+              <span>Windows Server</span><span>Active Directory</span>
+              <span>TCP/IP</span><span>PowerShell</span>
+              <span>Azure / M365</span><span>GLPI</span>
+            </div>
+            <div class="pc-links">
+              <a href="https://github.com/ITurkben" target="_blank" class="pcl-btn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/ibrahim-turkben-80140a236" target="_blank" class="pcl-btn pcl-ghost">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="about-main">
+          <p class="about-bio reveal">Je dépanne, je bricole, je développe — et quand ça marche, je recommence avec un truc plus compliqué.</p>
+          <div class="about-stats reveal">
+            <div class="ast-item"><span class="ast-n" data-count="10">0</span><span class="ast-l">Projets</span></div>
+            <div class="ast-item"><span class="ast-n" data-count="3">0</span><span class="ast-l">Ans d'expérience</span></div>
+            <div class="ast-item"><span class="ast-n" data-count="10">0</span><span class="ast-l">Technologies</span></div>
+            <div class="ast-item"><span class="ast-n">∞</span><span class="ast-l">Curiosité</span></div>
+          </div>
+          <div class="timeline reveal">
+            <h4 class="tl-heading">// Parcours</h4>
+            <div class="tl-item">
+              <span class="tl-year">2024</span>
+              <div class="tl-dot"></div>
+              <div class="tl-body"><strong>Technicien Support IT N2 — CDI</strong><span>Kuehne+Nagel — Limas</span></div>
+            </div>
+            <div class="tl-item">
+              <span class="tl-year">2021</span>
+              <div class="tl-dot"></div>
+              <div class="tl-body"><strong>Titre Pro Technicien Informatique</strong><span>MFR du Beaujolais &amp; Groupe Lépine — Alternance</span></div>
+            </div>
+            <div class="tl-item">
+              <span class="tl-year">2018</span>
+              <div class="tl-dot"></div>
+              <div class="tl-body"><strong>L1 &amp; L2 Informatique</strong><span>Université Lyon 1 Claude Bernard</span></div>
+            </div>
+            <div class="tl-item">
+              <span class="tl-year">2018</span>
+              <div class="tl-dot"></div>
+              <div class="tl-body"><strong>Baccalauréat S</strong><span>Lycée Claude Bernard — Villefranche-sur-Saône</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="sec-eyebrow">EXPERTISE</span>
+        <h2 class="sec-title">Compétences</h2>
+        <div class="sec-rule"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skills-col reveal">
+          <h4 class="sk-cat">Systèmes &amp; OS</h4>
+          <div class="sk-item" data-lvl="80"><div class="sk-head"><span>Windows Desktop / Server</span><span class="sk-pct">80%</span></div><div class="sk-bar"><div class="sk-fill"></div></div></div>
+          <div class="sk-item" data-lvl="55"><div class="sk-head"><span>Linux</span><span class="sk-pct">55%</span></div><div class="sk-bar"><div class="sk-fill"></div></div></div>
+          <div class="sk-item" data-lvl="50"><div class="sk-head"><span>macOS</span><span class="sk-pct">50%</span></div><div class="sk-bar"><div class="sk-fill"></div></div></div>
+          <h4 class="sk-cat" style="margin-top:2.5rem">Réseau &amp; Infra</h4>
+          <div class="sk-item" data-lvl="80"><div class="sk-head"><span>TCP/IP, DNS, DHCP</span><span class="sk-pct">80%</span></div><div class="sk-bar"><div class="sk-fill"></div></div></div>
+          <div class="sk-item" data-lvl="60"><div class="sk-head"><span>Active Directory / GPO</span><span class="sk-pct">60%</span></div><div class="sk-bar"><div class="sk-fill"></div></div></div>
+          <div class="sk-item" data-lvl="55"><div class="sk-head"><span>Pare-feu / VPN</span><span class="sk-pct">55%</span></div><div class="sk-bar"><div class="sk-fill"></div></div></div>
+        </div>
+        <div class="skills-col reveal" style="transition-delay:.15s">
+          <h4 class="sk-cat">Support &amp; Ticketing</h4>
+          <div class="sk-item" data-lvl="85"><div class="sk-head"><span>Diagnostic / Dépannage</span><span class="sk-pct">85%</span></div><div class="sk-bar"><div class="sk-fill"></div></div></div>
+          <div class="sk-item" data-lvl="75"><div class="sk-head"><span>GLPI / ITSM</span><span class="sk-pct">75%</span></div><div class="sk-bar"><div class="sk-fill"></div></div></div>
+          <div class="sk-item" data-lvl="80"><div class="sk-head"><span>Prise en main à distance</span><span class="sk-pct">80%</span></div><div class="sk-bar"><div class="sk-fill"></div></div></div>
+          <h4 class="sk-cat" style="margin-top:2.5rem">Dev &amp; Scripting</h4>
+          <div class="sk-item" data-lvl="55"><div class="sk-head"><span>PowerShell / Bash</span><span class="sk-pct">55%</span></div><div class="sk-bar"><div class="sk-fill"></div></div></div>
+          <div class="sk-item" data-lvl="35"><div class="sk-head"><span>Python</span><span class="sk-pct">35%</span></div><div class="sk-bar"><div class="sk-fill"></div></div></div>
+          <div class="sk-item" data-lvl="50"><div class="sk-head"><span>VMware / Hyper-V / Azure</span><span class="sk-pct">50%</span></div><div class="sk-bar"><div class="sk-fill"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="sec-eyebrow">DOSSIERS EN COURS</span>
+        <h2 class="sec-title">Projets</h2>
+        <div class="sec-rule"></div>
+      </div>
+      <div class="proj-filters reveal">
+        <button class="pf active" data-filter="all">Tous</button>
+        <button class="pf" data-filter="React">React</button>
+        <button class="pf" data-filter="Python">Python</button>
+        <button class="pf" data-filter="Node.js">Node.js</button>
+        <button class="pf" data-filter="Rust">Rust</button>
+      </div>
+      <div class="proj-grid" id="proj-grid"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="sec-eyebrow">CONSULTATION GRATUITE</span>
+        <h2 class="sec-title">Contact</h2>
+        <div class="sec-rule"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <p class="ci-lead">Disponible pour de nouvelles missions.<br>Réponse sous 24h, c'est garanti.</p>
+          <div class="ci-avail">
+            <span class="ci-dot"></span>
+            Ouvert aux opportunités
+          </div>
+          <div class="ci-links">
+            <a href="https://github.com/ITurkben" target="_blank" class="cil-row">
+              <span class="cil-label">GitHub</span>
+              <span class="cil-val">github.com/ITurkben</span>
+            </a>
+            <a href="https://www.linkedin.com/in/ibrahim-turkben-80140a236" target="_blank" class="cil-row">
+              <span class="cil-label">LinkedIn</span>
+              <span class="cil-val">ibrahim-turkben</span>
+            </a>
+          </div>
+          <blockquote class="ci-quote">
+            <p>"It's all good, man."</p>
+            <cite>— La devise qui résume tout</cite>
+          </blockquote>
+        </div>
+        <form id="contact-form" class="contact-form reveal" onsubmit="return false" style="transition-delay:.15s">
+          <div class="form-row"><label>Nom</label><input type="text" id="cf-name" class="form-input" placeholder="Votre nom"></div>
+          <div class="form-row"><label>Email</label><input type="email" id="cf-email" class="form-input" placeholder="votre@email.com"></div>
+          <div class="form-row"><label>Objet</label><select id="cf-type" class="form-input"><option>Mission freelance</option><option>Opportunité CDI</option><option>Collaboration projet</option><option>Autre</option></select></div>
+          <div class="form-row"><label>Message</label><textarea id="cf-msg" class="form-input" rows="4" placeholder="Décrivez votre besoin..."></textarea></div>
+          <button type="submit" id="submit-btn" class="btn-primary w-full">Envoyer ⟶</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <span class="footer-brand">It's all good, man.</span>
+          <span class="footer-copy">© 2025 Ibrahim TURKBEN — itsallgoodman.fr</span>
+        </div>
+        <div class="footer-right">
+          <a href="https://github.com/ITurkben" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/ibrahim-turkben-80140a236" target="_blank">LinkedIn</a>
+          <span class="footer-hint" id="footer-hint" title="Ouvrir le terminal secret">Ctrl+Shift+G = Easter egg 🤫</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- EASTER EGG TERMINAL -->
+  <div id="terminal-egg" class="hidden">
+    <div class="te-bar">
+      <span class="te-title">Better Call Ibrahim — Terminal</span>
+      <button class="te-close" id="te-close">✕</button>
+    </div>
+    <div class="te-body" id="te-body"></div>
+    <div class="te-input-row">
+      <span class="te-prompt">goodman@itsallgoodman:~$&nbsp;</span>
+      <input type="text" id="te-input" autocomplete="off" spellcheck="false" placeholder="help">
+    </div>
+  </div>
+
+  <!-- PHONE EASTER EGG -->
+  <div id="phone-egg" class="hidden">
+    <div class="phone-icon">📞</div>
+    <div class="phone-text">BETTER CALL IBRAHIM</div>
+  </div>
+
+</div><!-- /site -->
+
+<div id="notif-container"></div>
+<script src="app.js"></script>
+</body>
+</html>
