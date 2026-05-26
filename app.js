@@ -12,32 +12,31 @@ const delay = ms => new Promise(r => setTimeout(r, ms));
 /* ─── PROJECT DATA ─── */
 const PROJECTS = [
   {
-    id: 0, title: 'NeuralChat', tech: 'React',
+    id: 0,
+    title: 'Infrastructure Homelab — NAS & Stack ARR',
+    tech: 'Infra',
     caseNum: 'DOSSIER N°001', status: 'open',
-    desc: "Interface de chat IA avec analyse de sentiment en temps réel et synthèse vocale neurale.",
-    stack: ['React', 'Socket.io', 'TensorFlow.js'], stars: 5,
-    color: '#C9A227'
+    desc: "Conception et déploiement d'une infrastructure maison complète sur PC custom. Deux disques 4 To en RAID via Proxmox pour un NAS résilient. Stack ARR complète (Sonarr, Radarr, Lidarr, Prowlarr, Jellyfin…) virtualisée en conteneurs LXC/Docker avec gestion des permissions, volumes et réseau interne. Système 100% automatisé, disponible 24/7 sur le réseau local.",
+    stack: ['Proxmox', 'Linux', 'RAID', 'Docker', 'LXC', 'Networking', 'Self-Hosting'],
+    stars: 5, color: '#C9A227', github: null
   },
   {
-    id: 1, title: 'DataVortex', tech: 'Python',
-    caseNum: 'DOSSIER N°002', status: 'open',
-    desc: "Pipeline ETL avec visualisations 3D interactives et dashboards prédictifs en temps réel.",
-    stack: ['Python', 'D3.js', 'FastAPI'], stars: 4,
-    color: '#9A7E1F'
+    id: 1,
+    title: 'BrickOfThrones — Puzzle Python/Web',
+    tech: 'Python',
+    caseNum: 'DOSSIER N°002', status: 'closed',
+    desc: "Jeu de placement de briques développé en Python avec backend web dans le cadre du cours BDW à l'UCBL. Grilles générées aléatoirement, système de pioche, score calculé selon le nombre de tours. Projet mené en phases : conception, implémentation, intégration BDD, documentation et livraison.",
+    stack: ['Python', 'SQL', 'HTML/CSS', 'BDW', 'UCBL'],
+    stars: 4, color: '#9A7E1F', github: 'https://github.com/ITurkben/BrickOfThrones'
   },
   {
-    id: 2, title: 'CryptoNexus', tech: 'Node.js',
-    caseNum: 'DOSSIER N°003', status: 'closed',
-    desc: "Dashboard crypto multi-exchange avec alertes intelligentes et rebalancing automatisé.",
-    stack: ['Node.js', 'Redis', 'WebSocket'], stars: 5,
-    color: '#7A6018'
-  },
-  {
-    id: 3, title: 'VoidEngine', tech: 'Rust',
-    caseNum: 'DOSSIER N°004', status: 'open',
-    desc: "Moteur de rendu WebAssembly pour visualisations scientifiques haute performance.",
-    stack: ['Rust', 'WASM', 'WebGL'], stars: 4,
-    color: '#C9A227'
+    id: 2,
+    title: 'LAB — Boîte à outils IT & Automatisations',
+    tech: 'Scripts',
+    caseNum: 'DOSSIER N°003', status: 'open',
+    desc: "Dépôt de scripts développés en contexte professionnel et perso : automatisation de profils AD, sauvegardes USB, montage de lecteurs réseau, intégration API Lansweeper, automatisation Excel, et expérimentations LLM (ChatGPT API, IA vocale). Philosophie : si c'est répétitif, ça s'automatise.",
+    stack: ['PowerShell', 'Python', 'VBScript', 'AD', 'API', 'LLM'],
+    stars: 5, color: '#7A6018', github: 'https://github.com/ITurkben/LAB'
   }
 ];
 
@@ -89,11 +88,12 @@ Formulaire de contact disponible sur la page principale.`,
     cls: ''
   },
   projets: {
-    text: `DOSSIERS EN COURS :
-N°001  NeuralChat   — React / Socket.io / TensorFlow.js   ★★★★★
-N°002  DataVortex   — Python / D3.js / FastAPI            ★★★★☆
-N°003  CryptoNexus  — Node.js / Redis / WebSocket         ★★★★★  [CLÔTURÉ]
-N°004  VoidEngine   — Rust / WASM / WebGL                 ★★★★☆`,
+    text: `DOSSIERS :
+N°001  Homelab NAS & Stack ARR   — Proxmox / Docker / RAID     ★★★★★  [EN COURS]
+N°002  BrickOfThrones            — Python / SQL / HTML/CSS      ★★★★☆  [CLÔTURÉ]
+       github.com/ITurkben/BrickOfThrones
+N°003  LAB — Outils IT           — PowerShell / Python / LLM   ★★★★★  [EN COURS]
+       github.com/ITurkben/LAB`,
     cls: ''
   },
   saul: {
@@ -495,6 +495,13 @@ function renderProjects(filter) {
       <h3 class="proj-title">${p.title}</h3>
       <p class="proj-desc">${p.desc}</p>
       <div class="proj-stack">${p.stack.map(s => `<span>${s}</span>`).join('')}</div>
+      ${p.github ? `
+      <div class="proj-footer">
+        <a href="${p.github}" target="_blank" rel="noopener" class="proj-github-link">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          Voir sur GitHub →
+        </a>
+      </div>` : ''}
     </div>
   `).join('');
 
