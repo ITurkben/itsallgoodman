@@ -46,6 +46,15 @@ const PROJECTS = [
     desc: "Projet de fin d'études réalisé en alternance chez Groupe Lépine. Mission complète de A à Z : analyse du besoin, cahier des charges, architecture, déploiement et validation. Mise en place d'une infrastructure WDS/MDT pour le déploiement automatisé de Windows 10 — images personnalisées par profil métier, intégration Active Directory, séquences de tâches, drivers. Un poste sorti de carton prêt à l'emploi en moins de 30 minutes, sans intervention manuelle. Livrable : dossier technique complet validé dans le cadre du Titre Professionnel Technicien Informatique.",
     stack: ['WDS', 'MDT', 'Windows Server', 'Active Directory', 'Sysprep', 'DHCP'],
     stars: 4, color: '#8B6914', github: null
+  },
+  {
+    id: 4,
+    title: 'Onboarding Automatisé — Excel RH to Active Directory',
+    tech: 'Scripts',
+    caseNum: 'DOSSIER N°005', status: 'open',
+    desc: "Constat terrain chez Kuehne+Nagel : chaque arrivée de collaborateur générait une série de tâches manuelles répétitives — création du compte AD, attribution des groupes, configuration du profil. Temps perdu, risque d'oubli, dépendance à une seule personne. Solution : un template Excel fourni au service RH, couplé à un script Python qui lit le fichier et orchestre automatiquement la création du compte AD, l'attribution des permissions selon le profil métier et la génération du mot de passe temporaire. Résultat : un onboarding complet en moins de 2 minutes, zéro intervention manuelle du technicien IT.",
+    stack: ['Python', 'Active Directory', 'PowerShell', 'Excel', 'Automatisation'],
+    stars: 5, color: '#C9A227', github: null
   }
 ];
 
