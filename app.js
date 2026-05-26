@@ -37,6 +37,15 @@ const PROJECTS = [
     desc: "Dépôt de scripts développés en contexte professionnel et perso : automatisation de profils AD, sauvegardes USB, montage de lecteurs réseau, intégration API Lansweeper, automatisation Excel, et expérimentations LLM (ChatGPT API, IA vocale). Philosophie : si c'est répétitif, ça s'automatise.",
     stack: ['PowerShell', 'Python', 'VBScript', 'AD', 'API', 'LLM'],
     stars: 5, color: '#7A6018', github: 'https://github.com/ITurkben/LAB'
+  },
+  {
+    id: 3,
+    title: 'Automatisation du déploiement Windows — WDS/MDT',
+    tech: 'Infra',
+    caseNum: 'DOSSIER N°004', status: 'closed',
+    desc: "Projet de fin d'études réalisé en alternance chez Groupe Lépine. Mission complète de A à Z : analyse du besoin, cahier des charges, architecture, déploiement et validation. Mise en place d'une infrastructure WDS/MDT pour le déploiement automatisé de Windows 10 — images personnalisées par profil métier, intégration Active Directory, séquences de tâches, drivers. Un poste sorti de carton prêt à l'emploi en moins de 30 minutes, sans intervention manuelle. Livrable : dossier technique complet validé dans le cadre du Titre Professionnel Technicien Informatique.",
+    stack: ['WDS', 'MDT', 'Windows Server', 'Active Directory', 'Sysprep', 'DHCP'],
+    stars: 4, color: '#8B6914', github: null
   }
 ];
 
