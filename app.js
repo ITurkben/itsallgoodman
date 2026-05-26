@@ -284,12 +284,30 @@ function initNav() {
     links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + cur));
   }, { passive: true });
 
-  // Mobile menu
+  // Mobile menu — burger + overlay
+  const overlay = $('#nav-overlay');
+
+  function openMenu()  {
+    navLinks.classList.add('open');
+    overlay.classList.add('open');
+    burger.classList.add('open');
+    document.body.style.overflow = 'hidden'; // bloque le scroll derrière
+  }
+  function closeMenu() {
+    navLinks.classList.remove('open');
+    overlay.classList.remove('open');
+    burger.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
   burger.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
+    navLinks.classList.contains('open') ? closeMenu() : openMenu();
   });
+  // Clic sur overlay → ferme le menu
+  overlay.addEventListener('click', closeMenu);
+  // Clic sur un lien → ferme le menu
   navLinks.addEventListener('click', e => {
-    if (e.target.classList.contains('nl')) navLinks.classList.remove('open');
+    if (e.target.classList.contains('nl')) closeMenu();
   });
 
   // Logo click counter (5 clicks → phone easter egg)
