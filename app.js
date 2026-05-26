@@ -55,6 +55,15 @@ const PROJECTS = [
     desc: "Constat terrain chez Kuehne+Nagel : chaque arrivée de collaborateur générait une série de tâches manuelles répétitives — création du compte AD, attribution des groupes, configuration du profil. Temps perdu, risque d'oubli, dépendance à une seule personne. Solution : un template Excel fourni au service RH, couplé à un script Python qui lit le fichier et orchestre automatiquement la création du compte AD, l'attribution des permissions selon le profil métier et la génération du mot de passe temporaire. Résultat : un onboarding complet en moins de 2 minutes, zéro intervention manuelle du technicien IT.",
     stack: ['Python', 'Active Directory', 'PowerShell', 'Excel', 'Automatisation'],
     stars: 5, color: '#C9A227', github: null
+  },
+  {
+    id: 5,
+    title: 'Auto-Transcription & Synthèse de Réunions par IA',
+    tech: 'Python',
+    caseNum: 'DOSSIER N°006', status: 'closed',
+    desc: "Projet personnel de 2023 — avant que les outils de ce type ne deviennent grand public. Pipeline Python de bout en bout : enregistrement audio de la réunion, transcription automatique via reconnaissance vocale (Whisper, fraîchement sorti en open source), puis passage dans un LLM pour structurer et synthétiser — ordre du jour reconstruit, décisions prises, actions identifiées. Un compte-rendu propre généré automatiquement à la fin de chaque session. Réalisé à une époque où assembler ces briques soi-même demandait une vraie démarche d'exploration.",
+    stack: ['Python', 'Whisper', 'OpenAI API', 'Speech-to-Text', 'LLM', 'Automatisation'],
+    stars: 4, color: '#9A7E1F', github: null
   }
 ];
 
